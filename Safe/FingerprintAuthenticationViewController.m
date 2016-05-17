@@ -6,14 +6,14 @@
 //  Copyright © 2016 Lucian Todorovici. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "FingerprintAuthenticationViewController.h"
 @import LocalAuthentication;
 
-@interface LoginViewController ()
+@interface FingerprintAuthenticationViewController ()
 
 @end
 
-@implementation LoginViewController
+@implementation FingerprintAuthenticationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

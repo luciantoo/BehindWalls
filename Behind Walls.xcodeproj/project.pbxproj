@@ -31,7 +31,7 @@
 		CE6A07CF1C482BBF0023C1F3 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6A07CE1C482BBF0023C1F3 /* Accelerate.framework */; };
 		CE6A07D81C4838EB0023C1F3 /* MilkAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6A07D71C4838EB0023C1F3 /* MilkAlertViewController.m */; };
 		CE6A07E21C48D3290023C1F3 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6A07E11C48D3290023C1F3 /* TabBarController.m */; };
-		CE8DDE5F1CCE700700F4CEEA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDE5E1CCE700700F4CEEA /* LoginViewController.m */; };
+		CE8DDE5F1CCE700700F4CEEA /* FingerprintAuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDE5E1CCE700700F4CEEA /* FingerprintAuthenticationViewController.m */; };
 		CE8DDE631CCE865B00F4CEEA /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDE621CCE865B00F4CEEA /* ProfileViewController.m */; };
 		CE8DDE651CCF4F1900F4CEEA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8DDE641CCF4F1900F4CEEA /* CoreLocation.framework */; };
 		CEA995921CE1BC1D00232CCA /* FormsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA995911CE1BC1D00232CCA /* FormsPageViewController.m */; };
@@ -101,8 +101,8 @@
 		CE6A07D71C4838EB0023C1F3 /* MilkAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MilkAlertViewController.m; sourceTree = "<group>"; };
 		CE6A07E01C48D3290023C1F3 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		CE6A07E11C48D3290023C1F3 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
-		CE8DDE5D1CCE700700F4CEEA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		CE8DDE5E1CCE700700F4CEEA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		CE8DDE5D1CCE700700F4CEEA /* FingerprintAuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FingerprintAuthenticationViewController.h; sourceTree = "<group>"; };
+		CE8DDE5E1CCE700700F4CEEA /* FingerprintAuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FingerprintAuthenticationViewController.m; sourceTree = "<group>"; };
 		CE8DDE611CCE865B00F4CEEA /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		CE8DDE621CCE865B00F4CEEA /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		CE8DDE641CCF4F1900F4CEEA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -294,6 +294,7 @@
 		CE6A07D51C48385D0023C1F3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CEC1DB7D1CEB5F6C004AB4B5 /* Authentication */,
 				CEA9958F1CE1BBDA00232CCA /* Forms */,
 				CE6A079B1C4828B70023C1F3 /* FirstViewController.h */,
 				CE6A079C1C4828B70023C1F3 /* FirstViewController.m */,
@@ -305,8 +306,6 @@
 				EAFD8F851C799BAF00EE263A /* MediaCaptureViewController.m */,
 				EA1221351C9592280066148B /* FilterTestViewController.h */,
 				EA1221361C9592280066148B /* FilterTestViewController.m */,
-				CE8DDE5D1CCE700700F4CEEA /* LoginViewController.h */,
-				CE8DDE5E1CCE700700F4CEEA /* LoginViewController.m */,
 				CE8DDE611CCE865B00F4CEEA /* ProfileViewController.h */,
 				CE8DDE621CCE865B00F4CEEA /* ProfileViewController.m */,
 				CE2551671CD0B9CD001A0401 /* RoomViewController.h */,
@@ -347,6 +346,15 @@
 				CEA995971CE1BC6800232CCA /* FormsDataSource.m */,
 			);
 			name = Forms;
+			sourceTree = "<group>";
+		};
+		CEC1DB7D1CEB5F6C004AB4B5 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				CE8DDE5D1CCE700700F4CEEA /* FingerprintAuthenticationViewController.h */,
+				CE8DDE5E1CCE700700F4CEEA /* FingerprintAuthenticationViewController.m */,
+			);
+			name = Authentication;
 			sourceTree = "<group>";
 		};
 		EA12213A1C9595530066148B /* Color filters */ = {
@@ -516,7 +524,7 @@
 				EA9738AC1C956C1500A67730 /* SobelFilter.m in Sources */,
 				CEA995921CE1BC1D00232CCA /* FormsPageViewController.m in Sources */,
 				CEA995981CE1BC6800232CCA /* FormsDataSource.m in Sources */,
-				CE8DDE5F1CCE700700F4CEEA /* LoginViewController.m in Sources */,
+				CE8DDE5F1CCE700700F4CEEA /* FingerprintAuthenticationViewController.m in Sources */,
 				CE6A079A1C4828B70023C1F3 /* AppDelegate.m in Sources */,
 				CE6A07E21C48D3290023C1F3 /* TabBarController.m in Sources */,
 				CE03C3581CE8839B00091DBC /* Estate.m in Sources */,
