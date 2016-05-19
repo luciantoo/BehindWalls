@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AuthProtocol.h"
 
-@interface FingerprintAuthenticationViewController : UIViewController
+@interface FingerprintAuthenticationViewController : UIViewController <AuthProtocol>
 
 @end

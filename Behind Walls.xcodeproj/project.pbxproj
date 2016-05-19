@@ -31,9 +31,15 @@
 		CE6A07CF1C482BBF0023C1F3 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6A07CE1C482BBF0023C1F3 /* Accelerate.framework */; };
 		CE6A07D81C4838EB0023C1F3 /* MilkAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6A07D71C4838EB0023C1F3 /* MilkAlertViewController.m */; };
 		CE6A07E21C48D3290023C1F3 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6A07E11C48D3290023C1F3 /* TabBarController.m */; };
-		CE8DDE5F1CCE700700F4CEEA /* FingerprintAuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDE5E1CCE700700F4CEEA /* FingerprintAuthenticationViewController.m */; };
 		CE8DDE631CCE865B00F4CEEA /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDE621CCE865B00F4CEEA /* ProfileViewController.m */; };
 		CE8DDE651CCF4F1900F4CEEA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8DDE641CCF4F1900F4CEEA /* CoreLocation.framework */; };
+		CE9D014F1CEE2C2F00BD4D43 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9D014E1CEE2C2F00BD4D43 /* Authentication.storyboard */; };
+		CE9D01521CEE2F1E00BD4D43 /* FacebookAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9D01511CEE2F1E00BD4D43 /* FacebookAuthViewController.m */; };
+		CE9D01561CEE328200BD4D43 /* AuthenticationOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9D01551CEE328200BD4D43 /* AuthenticationOptionsViewController.m */; };
+		CE9D01591CEE32B800BD4D43 /* FingerprintAuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9D01581CEE32B800BD4D43 /* FingerprintAuthenticationViewController.m */; };
+		CE9D015D1CEE341D00BD4D43 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9D015A1CEE341D00BD4D43 /* FBSDKCoreKit.framework */; };
+		CE9D015E1CEE341D00BD4D43 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9D015B1CEE341D00BD4D43 /* FBSDKLoginKit.framework */; };
+		CE9D015F1CEE341D00BD4D43 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9D015C1CEE341D00BD4D43 /* FBSDKShareKit.framework */; };
 		CEA995921CE1BC1D00232CCA /* FormsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA995911CE1BC1D00232CCA /* FormsPageViewController.m */; };
 		CEA995981CE1BC6800232CCA /* FormsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA995971CE1BC6800232CCA /* FormsDataSource.m */; };
 		EA1221371C9592280066148B /* FilterTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1221361C9592280066148B /* FilterTestViewController.m */; };
@@ -101,11 +107,20 @@
 		CE6A07D71C4838EB0023C1F3 /* MilkAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MilkAlertViewController.m; sourceTree = "<group>"; };
 		CE6A07E01C48D3290023C1F3 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		CE6A07E11C48D3290023C1F3 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
-		CE8DDE5D1CCE700700F4CEEA /* FingerprintAuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FingerprintAuthenticationViewController.h; sourceTree = "<group>"; };
-		CE8DDE5E1CCE700700F4CEEA /* FingerprintAuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FingerprintAuthenticationViewController.m; sourceTree = "<group>"; };
 		CE8DDE611CCE865B00F4CEEA /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		CE8DDE621CCE865B00F4CEEA /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		CE8DDE641CCF4F1900F4CEEA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CE9D014E1CEE2C2F00BD4D43 /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Authentication.storyboard; path = Authentication/Authentication.storyboard; sourceTree = "<group>"; };
+		CE9D01501CEE2F1E00BD4D43 /* FacebookAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacebookAuthViewController.h; path = Authentication/FacebookAuthViewController.h; sourceTree = "<group>"; };
+		CE9D01511CEE2F1E00BD4D43 /* FacebookAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookAuthViewController.m; path = Authentication/FacebookAuthViewController.m; sourceTree = "<group>"; };
+		CE9D01531CEE2F6A00BD4D43 /* AuthProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AuthProtocol.h; path = Authentication/AuthProtocol.h; sourceTree = "<group>"; };
+		CE9D01541CEE328200BD4D43 /* AuthenticationOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AuthenticationOptionsViewController.h; path = Authentication/AuthenticationOptionsViewController.h; sourceTree = "<group>"; };
+		CE9D01551CEE328200BD4D43 /* AuthenticationOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AuthenticationOptionsViewController.m; path = Authentication/AuthenticationOptionsViewController.m; sourceTree = "<group>"; };
+		CE9D01571CEE32B800BD4D43 /* FingerprintAuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FingerprintAuthenticationViewController.h; path = Authentication/FingerprintAuthenticationViewController.h; sourceTree = "<group>"; };
+		CE9D01581CEE32B800BD4D43 /* FingerprintAuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FingerprintAuthenticationViewController.m; path = Authentication/FingerprintAuthenticationViewController.m; sourceTree = "<group>"; };
+		CE9D015A1CEE341D00BD4D43 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ExternalFrameworks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		CE9D015B1CEE341D00BD4D43 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ExternalFrameworks/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		CE9D015C1CEE341D00BD4D43 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ExternalFrameworks/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		CEA9958E1CE1B66800232CCA /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CEA995901CE1BC1D00232CCA /* FormsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormsPageViewController.h; sourceTree = "<group>"; };
 		CEA995911CE1BC1D00232CCA /* FormsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormsPageViewController.m; sourceTree = "<group>"; };
@@ -126,9 +141,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE8DDE651CCF4F1900F4CEEA /* CoreLocation.framework in Frameworks */,
+				CE9D015E1CEE341D00BD4D43 /* FBSDKLoginKit.framework in Frameworks */,
 				EAFD8F881C79BD4A00EE263A /* Photos.framework in Frameworks */,
 				CE6A07CF1C482BBF0023C1F3 /* Accelerate.framework in Frameworks */,
+				CE9D015F1CEE341D00BD4D43 /* FBSDKShareKit.framework in Frameworks */,
 				CE03C35F1CE895EC00091DBC /* FLIROneSDK.framework in Frameworks */,
+				CE9D015D1CEE341D00BD4D43 /* FBSDKCoreKit.framework in Frameworks */,
 				CE6A07CD1C482BB70023C1F3 /* libstdc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +184,9 @@
 		CE03C35B1CE895D600091DBC /* ExternalFrameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE9D015A1CEE341D00BD4D43 /* FBSDKCoreKit.framework */,
+				CE9D015B1CEE341D00BD4D43 /* FBSDKLoginKit.framework */,
+				CE9D015C1CEE341D00BD4D43 /* FBSDKShareKit.framework */,
 				CE03C35E1CE895EC00091DBC /* FLIROneSDK.framework */,
 				CE03C35C1CE895E200091DBC /* FLIROneSDK.bundle */,
 			);
@@ -351,8 +372,14 @@
 		CEC1DB7D1CEB5F6C004AB4B5 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				CE8DDE5D1CCE700700F4CEEA /* FingerprintAuthenticationViewController.h */,
-				CE8DDE5E1CCE700700F4CEEA /* FingerprintAuthenticationViewController.m */,
+				CE9D01571CEE32B800BD4D43 /* FingerprintAuthenticationViewController.h */,
+				CE9D01581CEE32B800BD4D43 /* FingerprintAuthenticationViewController.m */,
+				CE9D01541CEE328200BD4D43 /* AuthenticationOptionsViewController.h */,
+				CE9D01551CEE328200BD4D43 /* AuthenticationOptionsViewController.m */,
+				CE9D014E1CEE2C2F00BD4D43 /* Authentication.storyboard */,
+				CE9D01501CEE2F1E00BD4D43 /* FacebookAuthViewController.h */,
+				CE9D01511CEE2F1E00BD4D43 /* FacebookAuthViewController.m */,
+				CE9D01531CEE2F6A00BD4D43 /* AuthProtocol.h */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -449,7 +476,7 @@
 				TargetAttributes = {
 					CE6A07911C4828B70023C1F3 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = N23C3U6M9H;
+						DevelopmentTeam = L87LYZ5K72;
 					};
 					CE6A07AA1C4828B70023C1F3 = {
 						CreatedOnToolsVersion = 7.2;
@@ -488,6 +515,7 @@
 			files = (
 				CE03C3501CE882A300091DBC /* splashscreen.png in Resources */,
 				CE6A07A51C4828B70023C1F3 /* LaunchScreen.storyboard in Resources */,
+				CE9D014F1CEE2C2F00BD4D43 /* Authentication.storyboard in Resources */,
 				CE03C35D1CE895E200091DBC /* FLIROneSDK.bundle in Resources */,
 				CE03C34E1CE8829A00091DBC /* minimal-milk.jpg in Resources */,
 				CE6A07A21C4828B70023C1F3 /* Assets.xcassets in Resources */,
@@ -522,9 +550,9 @@
 				CE6A079D1C4828B70023C1F3 /* FirstViewController.m in Sources */,
 				EAFD8F861C799BAF00EE263A /* MediaCaptureViewController.m in Sources */,
 				EA9738AC1C956C1500A67730 /* SobelFilter.m in Sources */,
+				CE9D01561CEE328200BD4D43 /* AuthenticationOptionsViewController.m in Sources */,
 				CEA995921CE1BC1D00232CCA /* FormsPageViewController.m in Sources */,
 				CEA995981CE1BC6800232CCA /* FormsDataSource.m in Sources */,
-				CE8DDE5F1CCE700700F4CEEA /* FingerprintAuthenticationViewController.m in Sources */,
 				CE6A079A1C4828B70023C1F3 /* AppDelegate.m in Sources */,
 				CE6A07E21C48D3290023C1F3 /* TabBarController.m in Sources */,
 				CE03C3581CE8839B00091DBC /* Estate.m in Sources */,
@@ -535,7 +563,9 @@
 				CE03C3481CE881F000091DBC /* ThermalProcessingUnit.m in Sources */,
 				CE03C3441CE8814D00091DBC /* WeatherManager.m in Sources */,
 				CE03C3591CE8839B00091DBC /* Room.m in Sources */,
+				CE9D01521CEE2F1E00BD4D43 /* FacebookAuthViewController.m in Sources */,
 				CE6A07971C4828B70023C1F3 /* main.m in Sources */,
+				CE9D01591CEE32B800BD4D43 /* FingerprintAuthenticationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

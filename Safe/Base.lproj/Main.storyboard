@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZVg-QQ-xPX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -289,26 +290,6 @@
             </objects>
             <point key="canvasLocation" x="923.5" y="1230.5"/>
         </scene>
-        <!--Fingerprint Authentication View Controller-->
-        <scene sceneID="xcv-Bz-ko4">
-            <objects>
-                <viewController id="j8g-0Q-64i" customClass="FingerprintAuthenticationViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wmu-ss-o8I"/>
-                        <viewControllerLayoutGuide type="bottom" id="aKj-SJ-wVR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="P6r-5H-doE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="rRp-ve-1Oy"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y9C-Zd-2PB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-138.5" y="399.5"/>
-        </scene>
         <!--Profile View Controller-->
         <scene sceneID="DX7-vd-0gU">
             <objects>
@@ -533,25 +514,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0MN-E0-lUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-311.5" y="-495.5"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Yu5-Du-Nxg">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r21-6F-Pk3" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yoQ-Y0-gtM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="j8g-0Q-64i" kind="relationship" relationship="rootViewController" id="USW-fP-gwn"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tDs-Lm-boX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-604.5" y="399.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J9J-DU-e45">
