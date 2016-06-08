@@ -10,6 +10,8 @@
 #import <FLIROneSDK/FLIROneSDK.h>
 #import <Photos/Photos.h>
 
-@interface MediaCaptureViewController : UIViewController <FLIROneSDKStreamManagerDelegate,FLIROneSDKImageReceiverDelegate>
+@import CoreLocation;
+
+@interface MediaCaptureViewController : UIViewController <FLIROneSDKStreamManagerDelegate,FLIROneSDKImageReceiverDelegate,CLLocationManagerDelegate>
 
 @end

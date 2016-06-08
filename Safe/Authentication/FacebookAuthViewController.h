@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AuthProtocol.h"
+#import "BasicAuthenticationViewController.h"
 
-@interface FacebookAuthViewController : UIViewController<AuthProtocol>
+/**
+ *  View controller used for Facebook authentication
+ */
+@interface FacebookAuthViewController : BasicAuthenticationViewController
 
 @end

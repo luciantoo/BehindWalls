@@ -21,7 +21,7 @@
 
 
 #pragma mark - Weather Service -
-#define kOpenweathermapAPIKey @"d9bbb6bc79e5dd3ec775c1e4b9c9b8bc"
-
+#define kOpenweathermapAPIKey @"APPID=d9bbb6bc79e5dd3ec775c1e4b9c9b8bc"
+#define kOpenweathermapURL @"http://api.openweathermap.org/data/2.5/weather?"
 
 #endif /* Constants_h */

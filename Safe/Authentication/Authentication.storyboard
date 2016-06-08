@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-665.5" y="408.5"/>
         </scene>
-        <!--Authentication Options View Controller-->
+        <!--Choose your login option-->
         <scene sceneID="y4v-N4-gve">
             <objects>
                 <viewController id="lVn-rF-MGG" customClass="AuthenticationOptionsViewController" sceneMemberID="viewController">
@@ -50,10 +50,17 @@
                                     <segue destination="yI2-76-Xg3" kind="show" id="fA9-fY-Axg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCI-qS-1Yd">
+                                <rect key="frame" x="162" y="459" width="50" height="30"/>
+                                <state key="normal" title="Google"/>
+                                <connections>
+                                    <segue destination="Jz7-eD-9jH" kind="show" id="KFK-LJ-iWy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="eUe-Cn-5fp"/>
+                    <navigationItem key="navigationItem" title="Choose your login option" id="eUe-Cn-5fp"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEs-YP-dr4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -98,6 +105,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jv4-28-spC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="303.5" y="813.5"/>
+        </scene>
+        <!--Google Sign In View Controller-->
+        <scene sceneID="Zbd-X6-T8G">
+            <objects>
+                <viewController id="Jz7-eD-9jH" customClass="GoogleSignInViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L3m-jx-xEg"/>
+                        <viewControllerLayoutGuide type="bottom" id="iPU-MN-3kS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RyC-an-s4v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="721-pz-EtG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="296.5" y="1573.5"/>
         </scene>
     </scenes>
 </document>

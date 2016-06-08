@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
 
-@interface ProfileViewController : UIViewController<CLLocationManagerDelegate>
+@interface ProfileViewController : UIViewController
 
 @end

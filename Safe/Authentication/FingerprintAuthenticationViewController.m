@@ -17,20 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self authenticate];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+#pragma mark -AuthProtocol-
 
 -(void)authenticate
 {
@@ -55,6 +53,7 @@
     
 }
 
+#pragma mark -Error handlind-
 
 -(void)handleAutheticationError:(NSError*)error
 {

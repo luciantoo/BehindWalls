@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nNT-nw-tWS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -105,16 +105,16 @@
                             <constraint firstItem="cBE-yw-Unu" firstAttribute="top" secondItem="GqU-21-QEy" secondAttribute="bottom" id="zQy-C5-gyg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="FilterTest" id="hB6-zw-6Dr"/>
+                    <tabBarItem key="tabBarItem" title="Show max. temp." id="hB6-zw-6Dr"/>
                     <connections>
                         <outlet property="imgView" destination="GqU-21-QEy" id="zKH-on-3Qr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6io-ZI-D0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-236.5" y="1288.5"/>
+            <point key="canvasLocation" x="-52.5" y="1339.5"/>
         </scene>
-        <!--Item-->
+        <!--Capture image-->
         <scene sceneID="ryB-lZ-lD9">
             <objects>
                 <viewController id="rWG-QY-txY" customClass="MediaCaptureViewController" sceneMemberID="viewController">
@@ -142,12 +142,38 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7dL-73-tQS">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Surface temp:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbB-kO-g5e">
+                                            <rect key="frame" x="8" y="8" width="359" height="21"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="cvc-Cf-TMG"/>
                                 </constraints>
                                 <blurEffect style="light"/>
                             </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Heading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zl-GA-eUS">
+                                <rect key="frame" x="20" y="489" width="195" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lB-5q-wfs">
+                                <rect key="frame" x="20" y="518" width="195" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDF-Ed-oTP">
+                                <rect key="frame" x="20" y="547" width="195" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -162,17 +188,21 @@
                             <constraint firstItem="D78-qT-48C" firstAttribute="centerX" secondItem="MFq-6X-XbQ" secondAttribute="centerX" id="tu3-kd-uIO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="tKl-X9-acD"/>
+                    <tabBarItem key="tabBarItem" title="Capture image" id="tKl-X9-acD"/>
                     <connections>
                         <outlet property="captureBtn" destination="D78-qT-48C" id="4DW-ff-wHn"/>
+                        <outlet property="cityLabel" destination="TDF-Ed-oTP" id="ss7-mU-NAB"/>
+                        <outlet property="headingLabel" destination="3zl-GA-eUS" id="hmL-3c-Gky"/>
                         <outlet property="imgView" destination="azT-ot-YtN" id="aiI-De-o4K"/>
+                        <outlet property="surfaceTemperatureLabel" destination="ZbB-kO-g5e" id="iZT-tM-3MT"/>
+                        <outlet property="temperatureLabel" destination="7lB-5q-wfs" id="sfe-cc-tCd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6KJ-a1-kXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="436.5" y="1339.5"/>
         </scene>
-        <!--Item-->
+        <!--Monitor temperature-->
         <scene sceneID="CDG-Kz-lOV">
             <objects>
                 <viewController id="ujE-be-jBG" customClass="MilkAlertViewController" sceneMemberID="viewController">
@@ -277,7 +307,7 @@
                             <constraint firstItem="qAk-Tm-6qQ" firstAttribute="leading" secondItem="com-qr-pkq" secondAttribute="leadingMargin" constant="10" id="wgZ-6L-wRt"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="w2Z-gL-sGb"/>
+                    <tabBarItem key="tabBarItem" title="Monitor temperature" id="w2Z-gL-sGb"/>
                     <connections>
                         <outlet property="crosshairBlurView" destination="gxq-n8-FxC" id="d37-hz-2gm"/>
                         <outlet property="imgView" destination="RNU-Lx-Sra" id="cwN-bg-vsP"/>
@@ -288,7 +318,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EWR-iu-Fvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="923.5" y="1230.5"/>
+            <point key="canvasLocation" x="901.5" y="1339.5"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="DX7-vd-0gU">

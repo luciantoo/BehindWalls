@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C61A788B076E4EEFB1189DB /* libPods-Behind WallsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0F9D12BF70933FC0D0E674 /* libPods-Behind WallsTests.a */; };
 		CE03C3441CE8814D00091DBC /* WeatherManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE03C3431CE8814D00091DBC /* WeatherManager.m */; };
 		CE03C3481CE881F000091DBC /* ThermalProcessingUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = CE03C3471CE881F000091DBC /* ThermalProcessingUnit.m */; };
 		CE03C34A1CE8828500091DBC /* crs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE03C3491CE8828500091DBC /* crs@2x.png */; };
@@ -19,6 +20,7 @@
 		CE03C35D1CE895E200091DBC /* FLIROneSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE03C35C1CE895E200091DBC /* FLIROneSDK.bundle */; };
 		CE03C35F1CE895EC00091DBC /* FLIROneSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE03C35E1CE895EC00091DBC /* FLIROneSDK.framework */; };
 		CE2551691CD0B9CD001A0401 /* RoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2551681CD0B9CD001A0401 /* RoomViewController.m */; };
+		CE56556A1CF98AE700E21C98 /* BasicAuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5655691CF98AE700E21C98 /* BasicAuthenticationViewController.m */; };
 		CE6A07971C4828B70023C1F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6A07961C4828B70023C1F3 /* main.m */; };
 		CE6A079A1C4828B70023C1F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6A07991C4828B70023C1F3 /* AppDelegate.m */; };
 		CE6A079D1C4828B70023C1F3 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6A079C1C4828B70023C1F3 /* FirstViewController.m */; };
@@ -40,12 +42,19 @@
 		CE9D015D1CEE341D00BD4D43 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9D015A1CEE341D00BD4D43 /* FBSDKCoreKit.framework */; };
 		CE9D015E1CEE341D00BD4D43 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9D015B1CEE341D00BD4D43 /* FBSDKLoginKit.framework */; };
 		CE9D015F1CEE341D00BD4D43 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9D015C1CEE341D00BD4D43 /* FBSDKShareKit.framework */; };
+		CE9D01611CEE3CED00BD4D43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE9D01601CEE3CED00BD4D43 /* GoogleService-Info.plist */; };
+		CE9D01621CEE3D0900BD4D43 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE6A07A61C4828B70023C1F3 /* Info.plist */; };
+		CE9D01631CEE3D0A00BD4D43 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE6A07A61C4828B70023C1F3 /* Info.plist */; };
+		CE9D01641CEE3D0B00BD4D43 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE6A07A61C4828B70023C1F3 /* Info.plist */; };
+		CE9D01671CEEEAB200BD4D43 /* GoogleSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9D01661CEEEAB200BD4D43 /* GoogleSignInViewController.m */; };
 		CEA995921CE1BC1D00232CCA /* FormsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA995911CE1BC1D00232CCA /* FormsPageViewController.m */; };
 		CEA995981CE1BC6800232CCA /* FormsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA995971CE1BC6800232CCA /* FormsDataSource.m */; };
+		D0D22D0347D90898FF3C542A /* libPods-Behind Walls.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E7BB29920BAF61A05AF41D /* libPods-Behind Walls.a */; };
 		EA1221371C9592280066148B /* FilterTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1221361C9592280066148B /* FilterTestViewController.m */; };
 		EA9738AC1C956C1500A67730 /* SobelFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9738AB1C956C1500A67730 /* SobelFilter.m */; };
 		EAFD8F861C799BAF00EE263A /* MediaCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFD8F851C799BAF00EE263A /* MediaCaptureViewController.m */; };
 		EAFD8F881C79BD4A00EE263A /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFD8F871C79BD4A00EE263A /* Photos.framework */; };
+		F307C5B4602000A871C8783D /* libPods-Behind WallsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9BACBD38C3B852B256384B /* libPods-Behind WallsUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +75,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00E76820C4D347A6FDE8589B /* Pods-Behind WallsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Behind WallsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Behind WallsTests/Pods-Behind WallsTests.release.xcconfig"; sourceTree = "<group>"; };
+		23E7BB29920BAF61A05AF41D /* libPods-Behind Walls.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Behind Walls.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		267695A34B2FDA445D4415CF /* Pods-Behind Walls.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Behind Walls.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Behind Walls/Pods-Behind Walls.debug.xcconfig"; sourceTree = "<group>"; };
+		7AFB5BC80FF66BA195E62A12 /* Pods-Behind WallsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Behind WallsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Behind WallsUITests/Pods-Behind WallsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AA19C712DCBF31808ABAE458 /* Pods-Behind WallsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Behind WallsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Behind WallsUITests/Pods-Behind WallsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CBEB8D79EEB00961A2183248 /* Pods-Behind Walls.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Behind Walls.release.xcconfig"; path = "Pods/Target Support Files/Pods-Behind Walls/Pods-Behind Walls.release.xcconfig"; sourceTree = "<group>"; };
+		CC9BACBD38C3B852B256384B /* libPods-Behind WallsUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Behind WallsUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE03C3421CE8814D00091DBC /* WeatherManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherManager.h; path = Weather/WeatherManager.h; sourceTree = "<group>"; };
 		CE03C3431CE8814D00091DBC /* WeatherManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherManager.m; path = Weather/WeatherManager.m; sourceTree = "<group>"; };
 		CE03C3451CE881A500091DBC /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Constants/Constants.h; sourceTree = "<group>"; };
@@ -83,8 +99,11 @@
 		CE03C3571CE8839B00091DBC /* Wall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Wall.m; path = "Model/Assessment Objects/Wall.m"; sourceTree = "<group>"; };
 		CE03C35C1CE895E200091DBC /* FLIROneSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FLIROneSDK.bundle; path = ExternalFrameworks/FLIROneSDK.bundle; sourceTree = "<group>"; };
 		CE03C35E1CE895EC00091DBC /* FLIROneSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FLIROneSDK.framework; path = ExternalFrameworks/FLIROneSDK.framework; sourceTree = "<group>"; };
+		CE0F9D12BF70933FC0D0E674 /* libPods-Behind WallsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Behind WallsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2551671CD0B9CD001A0401 /* RoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomViewController.h; sourceTree = "<group>"; };
 		CE2551681CD0B9CD001A0401 /* RoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomViewController.m; sourceTree = "<group>"; };
+		CE5655681CF98AE700E21C98 /* BasicAuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicAuthenticationViewController.h; path = Authentication/BasicAuthenticationViewController.h; sourceTree = "<group>"; };
+		CE5655691CF98AE700E21C98 /* BasicAuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicAuthenticationViewController.m; path = Authentication/BasicAuthenticationViewController.m; sourceTree = "<group>"; };
 		CE6A07921C4828B70023C1F3 /* Behind Walls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Behind Walls.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6A07961C4828B70023C1F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE6A07981C4828B70023C1F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -121,11 +140,15 @@
 		CE9D015A1CEE341D00BD4D43 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ExternalFrameworks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		CE9D015B1CEE341D00BD4D43 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ExternalFrameworks/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		CE9D015C1CEE341D00BD4D43 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ExternalFrameworks/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		CE9D01601CEE3CED00BD4D43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE9D01651CEEEAB200BD4D43 /* GoogleSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoogleSignInViewController.h; path = Authentication/GoogleSignInViewController.h; sourceTree = "<group>"; };
+		CE9D01661CEEEAB200BD4D43 /* GoogleSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoogleSignInViewController.m; path = Authentication/GoogleSignInViewController.m; sourceTree = "<group>"; };
 		CEA9958E1CE1B66800232CCA /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CEA995901CE1BC1D00232CCA /* FormsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormsPageViewController.h; sourceTree = "<group>"; };
 		CEA995911CE1BC1D00232CCA /* FormsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormsPageViewController.m; sourceTree = "<group>"; };
 		CEA995961CE1BC6800232CCA /* FormsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormsDataSource.h; sourceTree = "<group>"; };
 		CEA995971CE1BC6800232CCA /* FormsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormsDataSource.m; sourceTree = "<group>"; };
+		D391FF95B6534865AE7592C7 /* Pods-Behind WallsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Behind WallsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Behind WallsTests/Pods-Behind WallsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA1221351C9592280066148B /* FilterTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterTestViewController.h; sourceTree = "<group>"; };
 		EA1221361C9592280066148B /* FilterTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterTestViewController.m; sourceTree = "<group>"; };
 		EA9738AA1C956C1500A67730 /* SobelFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SobelFilter.h; path = ImageProcessing/Filters/SobelFilter.h; sourceTree = "<group>"; };
@@ -148,6 +171,7 @@
 				CE03C35F1CE895EC00091DBC /* FLIROneSDK.framework in Frameworks */,
 				CE9D015D1CEE341D00BD4D43 /* FBSDKCoreKit.framework in Frameworks */,
 				CE6A07CD1C482BB70023C1F3 /* libstdc++.tbd in Frameworks */,
+				D0D22D0347D90898FF3C542A /* libPods-Behind Walls.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C61A788B076E4EEFB1189DB /* libPods-Behind WallsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,12 +187,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F307C5B4602000A871C8783D /* libPods-Behind WallsUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D4B96032CF315A396260045 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				267695A34B2FDA445D4415CF /* Pods-Behind Walls.debug.xcconfig */,
+				CBEB8D79EEB00961A2183248 /* Pods-Behind Walls.release.xcconfig */,
+				D391FF95B6534865AE7592C7 /* Pods-Behind WallsTests.debug.xcconfig */,
+				00E76820C4D347A6FDE8589B /* Pods-Behind WallsTests.release.xcconfig */,
+				AA19C712DCBF31808ABAE458 /* Pods-Behind WallsUITests.debug.xcconfig */,
+				7AFB5BC80FF66BA195E62A12 /* Pods-Behind WallsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CE03C3511CE882E000091DBC /* Assesment Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +266,13 @@
 			name = Weather;
 			sourceTree = "<group>";
 		};
+		CE5655641CF9855800E21C98 /* Color detection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Color detection";
+			sourceTree = "<group>";
+		};
 		CE6A07891C4828B70023C1F3 = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +284,8 @@
 				CE6A07AE1C4828B70023C1F3 /* SafeTests */,
 				CE6A07B91C4828B70023C1F3 /* SafeUITests */,
 				CE6A07931C4828B70023C1F3 /* Products */,
+				3D4B96032CF315A396260045 /* Pods */,
+				DB0926D0DC6578B6F8D10BCD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -268,6 +316,7 @@
 				CE6A079E1C4828B70023C1F3 /* Main.storyboard */,
 				CE6A07A11C4828B70023C1F3 /* Assets.xcassets */,
 				CE6A07A31C4828B70023C1F3 /* LaunchScreen.storyboard */,
+				CE9D01601CEE3CED00BD4D43 /* GoogleService-Info.plist */,
 				CE6A07A61C4828B70023C1F3 /* Info.plist */,
 				CE6A07951C4828B70023C1F3 /* Supporting Files */,
 			);
@@ -372,6 +421,8 @@
 		CEC1DB7D1CEB5F6C004AB4B5 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				CE5655681CF98AE700E21C98 /* BasicAuthenticationViewController.h */,
+				CE5655691CF98AE700E21C98 /* BasicAuthenticationViewController.m */,
 				CE9D01571CEE32B800BD4D43 /* FingerprintAuthenticationViewController.h */,
 				CE9D01581CEE32B800BD4D43 /* FingerprintAuthenticationViewController.m */,
 				CE9D01541CEE328200BD4D43 /* AuthenticationOptionsViewController.h */,
@@ -380,8 +431,20 @@
 				CE9D01501CEE2F1E00BD4D43 /* FacebookAuthViewController.h */,
 				CE9D01511CEE2F1E00BD4D43 /* FacebookAuthViewController.m */,
 				CE9D01531CEE2F6A00BD4D43 /* AuthProtocol.h */,
+				CE9D01651CEEEAB200BD4D43 /* GoogleSignInViewController.h */,
+				CE9D01661CEEEAB200BD4D43 /* GoogleSignInViewController.m */,
 			);
 			name = Authentication;
+			sourceTree = "<group>";
+		};
+		DB0926D0DC6578B6F8D10BCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23E7BB29920BAF61A05AF41D /* libPods-Behind Walls.a */,
+				CE0F9D12BF70933FC0D0E674 /* libPods-Behind WallsTests.a */,
+				CC9BACBD38C3B852B256384B /* libPods-Behind WallsUITests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EA12213A1C9595530066148B /* Color filters */ = {
@@ -394,6 +457,7 @@
 		EA9738A91C956AA500A67730 /* ImageProcessing */ = {
 			isa = PBXGroup;
 			children = (
+				CE5655641CF9855800E21C98 /* Color detection */,
 				EA12213A1C9595530066148B /* Color filters */,
 				EA9738AD1C956C1900A67730 /* Ede detection filters */,
 			);
@@ -416,9 +480,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE6A07BF1C4828B80023C1F3 /* Build configuration list for PBXNativeTarget "Behind Walls" */;
 			buildPhases = (
+				21FF8FE5A2B00DBC1BE65CB4 /* Check Pods Manifest.lock */,
 				CE6A078E1C4828B70023C1F3 /* Sources */,
 				CE6A078F1C4828B70023C1F3 /* Frameworks */,
 				CE6A07901C4828B70023C1F3 /* Resources */,
+				456D422DEEA7117774F8B646 /* Embed Pods Frameworks */,
+				01FF660C87A9F51AB0542CDF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -433,9 +500,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE6A07C21C4828B80023C1F3 /* Build configuration list for PBXNativeTarget "Behind WallsTests" */;
 			buildPhases = (
+				ABBDDC07E021C44F7FB885AD /* Check Pods Manifest.lock */,
 				CE6A07A71C4828B70023C1F3 /* Sources */,
 				CE6A07A81C4828B70023C1F3 /* Frameworks */,
 				CE6A07A91C4828B70023C1F3 /* Resources */,
+				83F548B42D2C08E1E8C9DEF8 /* Embed Pods Frameworks */,
+				8DBEE7029CCB2A9577038732 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -451,9 +521,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE6A07C51C4828B80023C1F3 /* Build configuration list for PBXNativeTarget "Behind WallsUITests" */;
 			buildPhases = (
+				3AFCB60A1B2425E52EE03F37 /* Check Pods Manifest.lock */,
 				CE6A07B21C4828B70023C1F3 /* Sources */,
 				CE6A07B31C4828B70023C1F3 /* Frameworks */,
 				CE6A07B41C4828B70023C1F3 /* Resources */,
+				CB79C91564648B6776B03889 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -520,6 +592,8 @@
 				CE03C34E1CE8829A00091DBC /* minimal-milk.jpg in Resources */,
 				CE6A07A21C4828B70023C1F3 /* Assets.xcassets in Resources */,
 				CE6A07A01C4828B70023C1F3 /* Main.storyboard in Resources */,
+				CE9D01611CEE3CED00BD4D43 /* GoogleService-Info.plist in Resources */,
+				CE9D01621CEE3D0900BD4D43 /* Info.plist in Resources */,
 				CE03C34D1CE8829A00091DBC /* milk.jpg in Resources */,
 				CE03C34A1CE8828500091DBC /* crs@2x.png in Resources */,
 			);
@@ -529,6 +603,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9D01631CEE3D0A00BD4D43 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,10 +611,134 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9D01641CEE3D0B00BD4D43 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01FF660C87A9F51AB0542CDF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Behind Walls/Pods-Behind Walls-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		21FF8FE5A2B00DBC1BE65CB4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3AFCB60A1B2425E52EE03F37 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		456D422DEEA7117774F8B646 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Behind Walls/Pods-Behind Walls-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83F548B42D2C08E1E8C9DEF8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Behind WallsTests/Pods-Behind WallsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DBEE7029CCB2A9577038732 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Behind WallsTests/Pods-Behind WallsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABBDDC07E021C44F7FB885AD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CB79C91564648B6776B03889 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Behind WallsUITests/Pods-Behind WallsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE6A078E1C4828B70023C1F3 /* Sources */ = {
@@ -549,6 +748,7 @@
 				CE6A07D81C4838EB0023C1F3 /* MilkAlertViewController.m in Sources */,
 				CE6A079D1C4828B70023C1F3 /* FirstViewController.m in Sources */,
 				EAFD8F861C799BAF00EE263A /* MediaCaptureViewController.m in Sources */,
+				CE9D01671CEEEAB200BD4D43 /* GoogleSignInViewController.m in Sources */,
 				EA9738AC1C956C1500A67730 /* SobelFilter.m in Sources */,
 				CE9D01561CEE328200BD4D43 /* AuthenticationOptionsViewController.m in Sources */,
 				CEA995921CE1BC1D00232CCA /* FormsPageViewController.m in Sources */,
@@ -556,6 +756,7 @@
 				CE6A079A1C4828B70023C1F3 /* AppDelegate.m in Sources */,
 				CE6A07E21C48D3290023C1F3 /* TabBarController.m in Sources */,
 				CE03C3581CE8839B00091DBC /* Estate.m in Sources */,
+				CE56556A1CF98AE700E21C98 /* BasicAuthenticationViewController.m in Sources */,
 				CE2551691CD0B9CD001A0401 /* RoomViewController.m in Sources */,
 				CE03C35A1CE8839B00091DBC /* Wall.m in Sources */,
 				EA1221371C9592280066148B /* FilterTestViewController.m in Sources */,
@@ -702,6 +903,7 @@
 		};
 		CE6A07C01C4828B80023C1F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 267695A34B2FDA445D4415CF /* Pods-Behind Walls.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -714,7 +916,11 @@
 				);
 				INFOPLIST_FILE = Safe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.too.behindwalls;
 				PRODUCT_NAME = "Behind Walls";
 			};
@@ -722,6 +928,7 @@
 		};
 		CE6A07C11C4828B80023C1F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBEB8D79EEB00961A2183248 /* Pods-Behind Walls.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -734,7 +941,10 @@
 				);
 				INFOPLIST_FILE = Safe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.too.behindwalls;
 				PRODUCT_NAME = "Behind Walls";
 			};
@@ -742,6 +952,7 @@
 		};
 		CE6A07C31C4828B80023C1F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D391FF95B6534865AE7592C7 /* Pods-Behind WallsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SafeTests/Info.plist;
@@ -754,6 +965,7 @@
 		};
 		CE6A07C41C4828B80023C1F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00E76820C4D347A6FDE8589B /* Pods-Behind WallsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SafeTests/Info.plist;
@@ -766,6 +978,7 @@
 		};
 		CE6A07C61C4828B80023C1F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA19C712DCBF31808ABAE458 /* Pods-Behind WallsUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SafeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -778,6 +991,7 @@
 		};
 		CE6A07C71C4828B80023C1F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AFB5BC80FF66BA195E62A12 /* Pods-Behind WallsUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SafeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
