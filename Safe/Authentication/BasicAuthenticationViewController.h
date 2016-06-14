@@ -13,4 +13,6 @@
  */
 @interface BasicAuthenticationViewController : UIViewController<AuthProtocol>
 
+- (void)userAuthenticatedSuccessfully;
+
 @end

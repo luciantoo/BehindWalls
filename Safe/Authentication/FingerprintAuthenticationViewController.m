@@ -43,6 +43,7 @@
             dispatch_sync(dispatch_get_main_queue(), ^{
                 if(success && !error){
                     NSLog(@"Success!");
+                    [self userAuthenticatedSuccessfully];
                 }else{
                     [self handleAutheticationError:error];
                 }

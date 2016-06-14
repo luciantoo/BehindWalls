@@ -37,7 +37,11 @@
 
 
 - (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
-    NSLog(@"%@ has just signed in",user.profile.name);
+    if(error){
+        NSLog(@"Error:%@",error.localizedDescription);
+    }else{
+        NSLog(@"%@ has just signed in",user.profile.name);
+    }
 }
 
 - (void)signIn:(GIDSignIn *)signIn didDisconnectWithUser:(GIDGoogleUser *)user withError:(NSError *)error {

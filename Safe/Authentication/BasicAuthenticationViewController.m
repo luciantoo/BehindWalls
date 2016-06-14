@@ -7,6 +7,7 @@
 //
 
 #import "BasicAuthenticationViewController.h"
+#import "AppDelegate.h"
 
 @interface BasicAuthenticationViewController ()
 
@@ -23,6 +24,15 @@
     [super didReceiveMemoryWarning];
 }
 
+
+- (void)userAuthenticatedSuccessfully {
+    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *mainViewController = [mainStoryboard instantiateInitialViewController];
+    [self presentViewController:mainViewController animated:YES completion:^{
+        delegate.window.rootViewController = mainViewController;
+    }];
+}
 /*
 #pragma mark - Navigation
 
