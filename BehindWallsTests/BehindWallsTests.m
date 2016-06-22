@@ -81,7 +81,7 @@
 - (void)testWhite
 {
     UIImage *target = [self generateImageWithColor:[UIColor whiteColor]];
-    [_colorDetector ]
+
 }
 
 - (void)testBlack
