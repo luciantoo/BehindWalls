@@ -15,17 +15,24 @@
 
 @implementation BasicAuthenticationViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     [self authenticate];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
 }
 
 
-- (void)userAuthenticatedSuccessfully {
+/**
+ *  The method is called by subclasses when the authentication is successful.
+ *  The main view controller will be displayed and will become the root view-controller
+ */
+- (void)userAuthenticatedSuccessfully
+{
     AppDelegate *delegate = [UIApplication sharedApplication].delegate;
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *mainViewController = [mainStoryboard instantiateInitialViewController];
@@ -33,14 +40,5 @@
         delegate.window.rootViewController = mainViewController;
     }];
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

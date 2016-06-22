@@ -74,7 +74,7 @@ static NSString * const ALBUM_NAME = @"flir";
     if(self.imgView.image){
         [self addNewAssetWithImage:self.imgView.image toAlbum:ALBUM_NAME];
     }else{
-        NSLog(@"Cannot save the image, because it is nil");
+        DDLogError(@"Cannot save the image, because it is nil");
     }
 }
 
@@ -89,7 +89,7 @@ static NSString * const ALBUM_NAME = @"flir";
     });
 }
 
--(void)FLIROneSDKDelegateManager:(FLIROneSDKDelegateManager *)delegateManager didReceiveVisualJPEGImage:(NSData *)visualJPEGImage
+- (void)FLIROneSDKDelegateManager:(FLIROneSDKDelegateManager *)delegateManager didReceiveVisualJPEGImage:(NSData *)visualJPEGImage
 {
     const CGSize size = CGSizeMake(480, 640);
     UIImage *image = [FLIROneSDKUIImage imageWithFormat:FLIROneSDKImageOptionsVisualJPEGImage andData:visualJPEGImage andSize:size];
@@ -154,7 +154,7 @@ static NSString * const ALBUM_NAME = @"flir";
         [albumChangeRequest addAssets:@[ assetPlaceholder ]];
         
     } completionHandler:^(BOOL success, NSError *error) {
-        NSLog(@"Finished adding asset. %@", (success ? @"Success" : error));
+        DDLogInfo(@"Finished adding asset. %@", (success ? @"Success" : error));
     }];
 }
 
@@ -204,12 +204,12 @@ static NSString * const ALBUM_NAME = @"flir";
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
-    _headingLabel.text = [NSString stringWithFormat:@"%f°",newHeading.trueHeading];
+    _headingLabel.text = [NSString stringWithFormat:@"%f °N",newHeading.trueHeading];
 }
 
 #pragma mark - Altimeter -
 
--(void)startAltimeterUpdates
+- (void)startAltimeterUpdates
 {
     _altimeter = [[AltimeterWrapper alloc] init];
     [_altimeter showAltitudeInLabel:_altitudeLabel];

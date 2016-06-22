@@ -14,37 +14,37 @@
 
 @implementation GoogleSignInViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
 }
 
--(void)viewDidAppear:(BOOL)animated
+- (void)authenticate
 {
-    [super viewDidAppear:animated];
-}
-
--(void)authenticate {
-    NSError *configureError = nil;
-    [[GGLContext sharedInstance] configureWithError:&configureError];
+    NSError *configError = nil;
+    [[GGLContext sharedInstance] configureWithError:&configError];
     [GIDSignIn sharedInstance].delegate = self;
     [GIDSignIn sharedInstance].uiDelegate = self;
     [[GIDSignIn sharedInstance] signIn];
 }
 
 
-- (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
+- (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error
+{
     if(error){
-        NSLog(@"Error:%@",error.localizedDescription);
+        DDLogWarn(@"Google authentication -> Failed: %@",error.localizedDescription);
+        
     }else{
-        NSLog(@"%@ has just signed in",user.profile.name);
+        DDLogInfo(@"Google authentication -> User:%@ has just signed in",user.profile.name);
     }
 }
 
 - (void)signIn:(GIDSignIn *)signIn didDisconnectWithUser:(GIDGoogleUser *)user withError:(NSError *)error {
-    NSLog(@"%@ has just signed out",user.profile.name);
+    DDLogInfo(@"%@ has just signed out",user.profile.name);
 }
 @end

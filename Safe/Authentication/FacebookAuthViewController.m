@@ -15,32 +15,36 @@
 
 @implementation FacebookAuthViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated
+{
     [super viewDidAppear:animated];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
 }
 
 #pragma mark -AuthProtocol-
 
--(void)authenticate {
+- (void)authenticate
+{
     FBSDKLoginManager *loginManager = [FBSDKLoginManager new];
     [loginManager logInWithReadPermissions:@[@"email",@"public_profile"] fromViewController:self handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
         if(!error) {
             if(!result.isCancelled){
                 if(result.token){
-                    NSLog(@"Success");
+                    DDLogInfo(@"Fb Authentication -> Success");
                     return;
                 }
             }
         }
-        NSLog(@"Failed");
+        DDLogWarn(@"Fb Authentication -> Failed");
         UIViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"login_error_vc"];
         //(*ErrorViewController) controller
         [self.navigationController pushViewController:controller animated:YES];

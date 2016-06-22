@@ -8,11 +8,7 @@ pod 'Google/SignIn'
 pod 'CocoaLumberjack'
 end
 
-target 'Behind WallsTests' do
-pod 'Google/SignIn'
-end
-
-target 'Behind WallsUITests' do
+target 'BehindWallsTests' do
 pod 'Google/SignIn'
 end
 

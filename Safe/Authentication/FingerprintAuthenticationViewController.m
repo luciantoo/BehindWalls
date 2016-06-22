@@ -15,7 +15,8 @@
 
 @implementation FingerprintAuthenticationViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 }
 
@@ -24,13 +25,14 @@
     [super viewDidAppear:animated];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
 }
 
 #pragma mark -AuthProtocol-
 
--(void)authenticate
+- (void)authenticate
 {
     LAContext *authenticationContext = [[LAContext alloc] init];
     NSError *error = nil;
@@ -42,9 +44,10 @@
         [authenticationContext evaluatePolicy:LAPolicyDeviceOwnerAuthentication localizedReason:@"Please, authenticate!" reply:^(BOOL success, NSError * _Nullable error) {
             dispatch_sync(dispatch_get_main_queue(), ^{
                 if(success && !error){
-                    NSLog(@"Success!");
+                    DDLogInfo(@"Authentioncation -> Success!");
                     [self userAuthenticatedSuccessfully];
                 }else{
+                    DDLogWarn(@"Authentication -> Failed!");
                     [self handleAutheticationError:error];
                 }
             });
@@ -56,7 +59,7 @@
 
 #pragma mark -Error handlind-
 
--(void)handleAutheticationError:(NSError*)error
+- (void)handleAutheticationError:(NSError*)error
 {
     void (^authenticationHandler)(UIAlertAction * _Nonnull action);
     
