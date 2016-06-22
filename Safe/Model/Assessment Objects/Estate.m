@@ -9,5 +9,16 @@
 #import "Estate.h"
 
 @implementation Estate
+@synthesize placemark;
+
+- (id)init
+{
+    if(self = [super init]) {
+        
+        return self;
+    }
+    NSAssert(self,@"Cannot create new estate object");
+    return nil;
+}
 
 @end

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C61A788B076E4EEFB1189DB /* libPods-Behind WallsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0F9D12BF70933FC0D0E674 /* libPods-Behind WallsTests.a */; };
 		CE03C3441CE8814D00091DBC /* WeatherManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE03C3431CE8814D00091DBC /* WeatherManager.m */; };
 		CE03C3481CE881F000091DBC /* ThermalProcessingUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = CE03C3471CE881F000091DBC /* ThermalProcessingUnit.m */; };
 		CE03C34A1CE8828500091DBC /* crs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE03C3491CE8828500091DBC /* crs@2x.png */; };
@@ -19,6 +18,10 @@
 		CE03C35A1CE8839B00091DBC /* Wall.m in Sources */ = {isa = PBXBuildFile; fileRef = CE03C3571CE8839B00091DBC /* Wall.m */; };
 		CE03C35D1CE895E200091DBC /* FLIROneSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE03C35C1CE895E200091DBC /* FLIROneSDK.bundle */; };
 		CE03C35F1CE895EC00091DBC /* FLIROneSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE03C35E1CE895EC00091DBC /* FLIROneSDK.framework */; };
+		CE1154E11D1A724B00EF921F /* BehindWallsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1154E01D1A724B00EF921F /* BehindWallsTests.m */; };
+		CE1154F21D1A894F00EF921F /* WeatherJSON-Malformed.json in Resources */ = {isa = PBXBuildFile; fileRef = CE1154EF1D1A894F00EF921F /* WeatherJSON-Malformed.json */; };
+		CE1154F31D1A894F00EF921F /* WeatherJSON-Max.json in Resources */ = {isa = PBXBuildFile; fileRef = CE1154F01D1A894F00EF921F /* WeatherJSON-Max.json */; };
+		CE1154F41D1A894F00EF921F /* WeatherJSON-Neg.json in Resources */ = {isa = PBXBuildFile; fileRef = CE1154F11D1A894F00EF921F /* WeatherJSON-Neg.json */; };
 		CE2551691CD0B9CD001A0401 /* RoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2551681CD0B9CD001A0401 /* RoomViewController.m */; };
 		CE56556A1CF98AE700E21C98 /* BasicAuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5655691CF98AE700E21C98 /* BasicAuthenticationViewController.m */; };
 		CE6A07971C4828B70023C1F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6A07961C4828B70023C1F3 /* main.m */; };
@@ -27,12 +30,13 @@
 		CE6A07A01C4828B70023C1F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6A079E1C4828B70023C1F3 /* Main.storyboard */; };
 		CE6A07A21C4828B70023C1F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6A07A11C4828B70023C1F3 /* Assets.xcassets */; };
 		CE6A07A51C4828B70023C1F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6A07A31C4828B70023C1F3 /* LaunchScreen.storyboard */; };
-		CE6A07B01C4828B70023C1F3 /* SafeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6A07AF1C4828B70023C1F3 /* SafeTests.m */; };
 		CE6A07BB1C4828B70023C1F3 /* SafeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6A07BA1C4828B70023C1F3 /* SafeUITests.m */; };
 		CE6A07CD1C482BB70023C1F3 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6A07CC1C482BB70023C1F3 /* libstdc++.tbd */; };
 		CE6A07CF1C482BBF0023C1F3 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6A07CE1C482BBF0023C1F3 /* Accelerate.framework */; };
 		CE6A07D81C4838EB0023C1F3 /* MilkAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6A07D71C4838EB0023C1F3 /* MilkAlertViewController.m */; };
 		CE6A07E21C48D3290023C1F3 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6A07E11C48D3290023C1F3 /* TabBarController.m */; };
+		CE8861541D12CE6300C77853 /* AltimeterWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8861531D12CE6300C77853 /* AltimeterWrapper.m */; };
+		CE8861581D1423CD00C77853 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8861571D1423CD00C77853 /* MapViewController.m */; };
 		CE8DDE631CCE865B00F4CEEA /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8DDE621CCE865B00F4CEEA /* ProfileViewController.m */; };
 		CE8DDE651CCF4F1900F4CEEA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8DDE641CCF4F1900F4CEEA /* CoreLocation.framework */; };
 		CE9D014F1CEE2C2F00BD4D43 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9D014E1CEE2C2F00BD4D43 /* Authentication.storyboard */; };
@@ -44,9 +48,11 @@
 		CE9D015F1CEE341D00BD4D43 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9D015C1CEE341D00BD4D43 /* FBSDKShareKit.framework */; };
 		CE9D01611CEE3CED00BD4D43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE9D01601CEE3CED00BD4D43 /* GoogleService-Info.plist */; };
 		CE9D01621CEE3D0900BD4D43 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE6A07A61C4828B70023C1F3 /* Info.plist */; };
-		CE9D01631CEE3D0A00BD4D43 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE6A07A61C4828B70023C1F3 /* Info.plist */; };
 		CE9D01641CEE3D0B00BD4D43 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE6A07A61C4828B70023C1F3 /* Info.plist */; };
 		CE9D01671CEEEAB200BD4D43 /* GoogleSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9D01661CEEEAB200BD4D43 /* GoogleSignInViewController.m */; };
+		CEA270B61D11AA960010FB9B /* ColorDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA270B51D11AA960010FB9B /* ColorDetector.m */; };
+		CEA270B81D11AEB60010FB9B /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA270B71D11AEB60010FB9B /* CoreImage.framework */; };
+		CEA270BA1D11CD100010FB9B /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA270B91D11CD100010FB9B /* Logo.png */; };
 		CEA995921CE1BC1D00232CCA /* FormsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA995911CE1BC1D00232CCA /* FormsPageViewController.m */; };
 		CEA995981CE1BC6800232CCA /* FormsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA995971CE1BC6800232CCA /* FormsDataSource.m */; };
 		D0D22D0347D90898FF3C542A /* libPods-Behind Walls.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E7BB29920BAF61A05AF41D /* libPods-Behind Walls.a */; };
@@ -58,12 +64,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CE6A07AC1C4828B70023C1F3 /* PBXContainerItemProxy */ = {
+		CE1154E31D1A724B00EF921F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CE6A078A1C4828B70023C1F3 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CE6A07911C4828B70023C1F3;
-			remoteInfo = Safe;
+			remoteInfo = "Behind Walls";
 		};
 		CE6A07B71C4828B70023C1F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -100,6 +106,13 @@
 		CE03C35C1CE895E200091DBC /* FLIROneSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FLIROneSDK.bundle; path = ExternalFrameworks/FLIROneSDK.bundle; sourceTree = "<group>"; };
 		CE03C35E1CE895EC00091DBC /* FLIROneSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FLIROneSDK.framework; path = ExternalFrameworks/FLIROneSDK.framework; sourceTree = "<group>"; };
 		CE0F9D12BF70933FC0D0E674 /* libPods-Behind WallsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Behind WallsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1154D91D1A68AE00EF921F /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CE1154DE1D1A724A00EF921F /* BehindWallsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BehindWallsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1154E01D1A724B00EF921F /* BehindWallsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BehindWallsTests.m; sourceTree = "<group>"; };
+		CE1154E21D1A724B00EF921F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE1154EF1D1A894F00EF921F /* WeatherJSON-Malformed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "WeatherJSON-Malformed.json"; sourceTree = "<group>"; };
+		CE1154F01D1A894F00EF921F /* WeatherJSON-Max.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "WeatherJSON-Max.json"; sourceTree = "<group>"; };
+		CE1154F11D1A894F00EF921F /* WeatherJSON-Neg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "WeatherJSON-Neg.json"; sourceTree = "<group>"; };
 		CE2551671CD0B9CD001A0401 /* RoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomViewController.h; sourceTree = "<group>"; };
 		CE2551681CD0B9CD001A0401 /* RoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomViewController.m; sourceTree = "<group>"; };
 		CE5655681CF98AE700E21C98 /* BasicAuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicAuthenticationViewController.h; path = Authentication/BasicAuthenticationViewController.h; sourceTree = "<group>"; };
@@ -114,9 +127,6 @@
 		CE6A07A11C4828B70023C1F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE6A07A41C4828B70023C1F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE6A07A61C4828B70023C1F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE6A07AB1C4828B70023C1F3 /* Behind Walls.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Behind Walls.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE6A07AF1C4828B70023C1F3 /* SafeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafeTests.m; sourceTree = "<group>"; };
-		CE6A07B11C4828B70023C1F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6A07B61C4828B70023C1F3 /* Behind Walls.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Behind Walls.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6A07BA1C4828B70023C1F3 /* SafeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafeUITests.m; sourceTree = "<group>"; };
 		CE6A07BC1C4828B70023C1F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,6 +136,11 @@
 		CE6A07D71C4838EB0023C1F3 /* MilkAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MilkAlertViewController.m; sourceTree = "<group>"; };
 		CE6A07E01C48D3290023C1F3 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		CE6A07E11C48D3290023C1F3 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		CE8861521D12CE6300C77853 /* AltimeterWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AltimeterWrapper.h; path = Altimeter/AltimeterWrapper.h; sourceTree = "<group>"; };
+		CE8861531D12CE6300C77853 /* AltimeterWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AltimeterWrapper.m; path = Altimeter/AltimeterWrapper.m; sourceTree = "<group>"; };
+		CE8861551D14203F00C77853 /* MapDisplayableProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapDisplayableProtocol.h; path = "Model/Assessment Objects/MapDisplayableProtocol.h"; sourceTree = "<group>"; };
+		CE8861561D1423CD00C77853 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ViewControllers/MapViewController.h; sourceTree = "<group>"; };
+		CE8861571D1423CD00C77853 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ViewControllers/MapViewController.m; sourceTree = "<group>"; };
 		CE8DDE611CCE865B00F4CEEA /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		CE8DDE621CCE865B00F4CEEA /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		CE8DDE641CCF4F1900F4CEEA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -143,7 +158,10 @@
 		CE9D01601CEE3CED00BD4D43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE9D01651CEEEAB200BD4D43 /* GoogleSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoogleSignInViewController.h; path = Authentication/GoogleSignInViewController.h; sourceTree = "<group>"; };
 		CE9D01661CEEEAB200BD4D43 /* GoogleSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoogleSignInViewController.m; path = Authentication/GoogleSignInViewController.m; sourceTree = "<group>"; };
-		CEA9958E1CE1B66800232CCA /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CEA270B41D11AA960010FB9B /* ColorDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorDetector.h; path = ImageProcessing/ColorDetection/ColorDetector.h; sourceTree = "<group>"; };
+		CEA270B51D11AA960010FB9B /* ColorDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorDetector.m; path = ImageProcessing/ColorDetection/ColorDetector.m; sourceTree = "<group>"; };
+		CEA270B71D11AEB60010FB9B /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		CEA270B91D11CD100010FB9B /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		CEA995901CE1BC1D00232CCA /* FormsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormsPageViewController.h; sourceTree = "<group>"; };
 		CEA995911CE1BC1D00232CCA /* FormsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormsPageViewController.m; sourceTree = "<group>"; };
 		CEA995961CE1BC6800232CCA /* FormsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormsDataSource.h; sourceTree = "<group>"; };
@@ -159,10 +177,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CE1154DB1D1A724A00EF921F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE6A078F1C4828B70023C1F3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA270B81D11AEB60010FB9B /* CoreImage.framework in Frameworks */,
 				CE8DDE651CCF4F1900F4CEEA /* CoreLocation.framework in Frameworks */,
 				CE9D015E1CEE341D00BD4D43 /* FBSDKLoginKit.framework in Frameworks */,
 				EAFD8F881C79BD4A00EE263A /* Photos.framework in Frameworks */,
@@ -172,14 +198,6 @@
 				CE9D015D1CEE341D00BD4D43 /* FBSDKCoreKit.framework in Frameworks */,
 				CE6A07CD1C482BB70023C1F3 /* libstdc++.tbd in Frameworks */,
 				D0D22D0347D90898FF3C542A /* libPods-Behind Walls.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CE6A07A81C4828B70023C1F3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1C61A788B076E4EEFB1189DB /* libPods-Behind WallsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +234,7 @@
 				CE03C3551CE8839B00091DBC /* Room.m */,
 				CE03C3561CE8839B00091DBC /* Wall.h */,
 				CE03C3571CE8839B00091DBC /* Wall.m */,
+				CE8861551D14203F00C77853 /* MapDisplayableProtocol.h */,
 			);
 			name = "Assesment Objects";
 			sourceTree = "<group>";
@@ -230,6 +249,25 @@
 				CE03C35C1CE895E200091DBC /* FLIROneSDK.bundle */,
 			);
 			name = ExternalFrameworks;
+			sourceTree = "<group>";
+		};
+		CE1154D81D1A677000EF921F /* Measuring Units */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Measuring Units";
+			sourceTree = "<group>";
+		};
+		CE1154DF1D1A724B00EF921F /* BehindWallsTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE1154EF1D1A894F00EF921F /* WeatherJSON-Malformed.json */,
+				CE1154F01D1A894F00EF921F /* WeatherJSON-Max.json */,
+				CE1154F11D1A894F00EF921F /* WeatherJSON-Neg.json */,
+				CE1154E01D1A724B00EF921F /* BehindWallsTests.m */,
+				CE1154E21D1A724B00EF921F /* Info.plist */,
+			);
+			path = BehindWallsTests;
 			sourceTree = "<group>";
 		};
 		CE243BEC1CDF4AD60082FF8C /* Splashscreen */ = {
@@ -269,6 +307,8 @@
 		CE5655641CF9855800E21C98 /* Color detection */ = {
 			isa = PBXGroup;
 			children = (
+				CEA270B41D11AA960010FB9B /* ColorDetector.h */,
+				CEA270B51D11AA960010FB9B /* ColorDetector.m */,
 			);
 			name = "Color detection";
 			sourceTree = "<group>";
@@ -281,8 +321,8 @@
 				CE6A07CE1C482BBF0023C1F3 /* Accelerate.framework */,
 				CE6A07CC1C482BB70023C1F3 /* libstdc++.tbd */,
 				CE6A07941C4828B70023C1F3 /* Safe */,
-				CE6A07AE1C4828B70023C1F3 /* SafeTests */,
 				CE6A07B91C4828B70023C1F3 /* SafeUITests */,
+				CE1154DF1D1A724B00EF921F /* BehindWallsTests */,
 				CE6A07931C4828B70023C1F3 /* Products */,
 				3D4B96032CF315A396260045 /* Pods */,
 				DB0926D0DC6578B6F8D10BCD /* Frameworks */,
@@ -293,8 +333,8 @@
 			isa = PBXGroup;
 			children = (
 				CE6A07921C4828B70023C1F3 /* Behind Walls.app */,
-				CE6A07AB1C4828B70023C1F3 /* Behind Walls.xctest */,
 				CE6A07B61C4828B70023C1F3 /* Behind Walls.xctest */,
+				CE1154DE1D1A724A00EF921F /* BehindWallsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -302,6 +342,8 @@
 		CE6A07941C4828B70023C1F3 /* Safe */ = {
 			isa = PBXGroup;
 			children = (
+				CE1154D81D1A677000EF921F /* Measuring Units */,
+				CE8861511D12CE3E00C77853 /* Altimeter */,
 				CE03C35B1CE895D600091DBC /* ExternalFrameworks */,
 				CE2551771CD10B25001A0401 /* Weather */,
 				CE25516D1CD0F25C001A0401 /* Model */,
@@ -327,18 +369,9 @@
 			isa = PBXGroup;
 			children = (
 				CE6A07961C4828B70023C1F3 /* main.m */,
-				CEA9958E1CE1B66800232CCA /* PrefixHeader.pch */,
+				CE1154D91D1A68AE00EF921F /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CE6A07AE1C4828B70023C1F3 /* SafeTests */ = {
-			isa = PBXGroup;
-			children = (
-				CE6A07AF1C4828B70023C1F3 /* SafeTests.m */,
-				CE6A07B11C4828B70023C1F3 /* Info.plist */,
-			);
-			path = SafeTests;
 			sourceTree = "<group>";
 		};
 		CE6A07B91C4828B70023C1F3 /* SafeUITests */ = {
@@ -353,6 +386,7 @@
 		CE6A07D01C4831940023C1F3 /* UIResources */ = {
 			isa = PBXGroup;
 			children = (
+				CEA270B91D11CD100010FB9B /* Logo.png */,
 				CE03C34B1CE8829A00091DBC /* milk.jpg */,
 				CE03C34C1CE8829A00091DBC /* minimal-milk.jpg */,
 				CE03C3491CE8828500091DBC /* crs@2x.png */,
@@ -380,6 +414,8 @@
 				CE8DDE621CCE865B00F4CEEA /* ProfileViewController.m */,
 				CE2551671CD0B9CD001A0401 /* RoomViewController.h */,
 				CE2551681CD0B9CD001A0401 /* RoomViewController.m */,
+				CE8861561D1423CD00C77853 /* MapViewController.h */,
+				CE8861571D1423CD00C77853 /* MapViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -398,6 +434,15 @@
 			children = (
 			);
 			name = Alarms;
+			sourceTree = "<group>";
+		};
+		CE8861511D12CE3E00C77853 /* Altimeter */ = {
+			isa = PBXGroup;
+			children = (
+				CE8861521D12CE6300C77853 /* AltimeterWrapper.h */,
+				CE8861531D12CE6300C77853 /* AltimeterWrapper.m */,
+			);
+			name = Altimeter;
 			sourceTree = "<group>";
 		};
 		CE8DDE661CCFAE4200F4CEEA /* User */ = {
@@ -440,6 +485,7 @@
 		DB0926D0DC6578B6F8D10BCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEA270B71D11AEB60010FB9B /* CoreImage.framework */,
 				23E7BB29920BAF61A05AF41D /* libPods-Behind Walls.a */,
 				CE0F9D12BF70933FC0D0E674 /* libPods-Behind WallsTests.a */,
 				CC9BACBD38C3B852B256384B /* libPods-Behind WallsUITests.a */,
@@ -476,6 +522,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CE1154DD1D1A724A00EF921F /* BehindWallsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE1154E51D1A724B00EF921F /* Build configuration list for PBXNativeTarget "BehindWallsTests" */;
+			buildPhases = (
+				CE1154DA1D1A724A00EF921F /* Sources */,
+				CE1154DB1D1A724A00EF921F /* Frameworks */,
+				CE1154DC1D1A724A00EF921F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE1154E41D1A724B00EF921F /* PBXTargetDependency */,
+			);
+			name = BehindWallsTests;
+			productName = BehindWallsTests;
+			productReference = CE1154DE1D1A724A00EF921F /* BehindWallsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CE6A07911C4828B70023C1F3 /* Behind Walls */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE6A07BF1C4828B80023C1F3 /* Build configuration list for PBXNativeTarget "Behind Walls" */;
@@ -495,27 +559,6 @@
 			productName = Safe;
 			productReference = CE6A07921C4828B70023C1F3 /* Behind Walls.app */;
 			productType = "com.apple.product-type.application";
-		};
-		CE6A07AA1C4828B70023C1F3 /* Behind WallsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CE6A07C21C4828B80023C1F3 /* Build configuration list for PBXNativeTarget "Behind WallsTests" */;
-			buildPhases = (
-				ABBDDC07E021C44F7FB885AD /* Check Pods Manifest.lock */,
-				CE6A07A71C4828B70023C1F3 /* Sources */,
-				CE6A07A81C4828B70023C1F3 /* Frameworks */,
-				CE6A07A91C4828B70023C1F3 /* Resources */,
-				83F548B42D2C08E1E8C9DEF8 /* Embed Pods Frameworks */,
-				8DBEE7029CCB2A9577038732 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CE6A07AD1C4828B70023C1F3 /* PBXTargetDependency */,
-			);
-			name = "Behind WallsTests";
-			productName = SafeTests;
-			productReference = CE6A07AB1C4828B70023C1F3 /* Behind Walls.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		CE6A07B51C4828B70023C1F3 /* Behind WallsUITests */ = {
 			isa = PBXNativeTarget;
@@ -546,13 +589,13 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Lucian Todorovici";
 				TargetAttributes = {
+					CE1154DD1D1A724A00EF921F = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = CE6A07911C4828B70023C1F3;
+					};
 					CE6A07911C4828B70023C1F3 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = L87LYZ5K72;
-					};
-					CE6A07AA1C4828B70023C1F3 = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = CE6A07911C4828B70023C1F3;
 					};
 					CE6A07B51C4828B70023C1F3 = {
 						CreatedOnToolsVersion = 7.2;
@@ -560,7 +603,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CE6A078D1C4828B70023C1F3 /* Build configuration list for PBXProject "Behind Walls" */;
+			buildConfigurationList = CE6A078D1C4828B70023C1F3 /* Build configuration list for PBXProject "BehindWalls" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -574,17 +617,28 @@
 			projectRoot = "";
 			targets = (
 				CE6A07911C4828B70023C1F3 /* Behind Walls */,
-				CE6A07AA1C4828B70023C1F3 /* Behind WallsTests */,
 				CE6A07B51C4828B70023C1F3 /* Behind WallsUITests */,
+				CE1154DD1D1A724A00EF921F /* BehindWallsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CE1154DC1D1A724A00EF921F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE1154F21D1A894F00EF921F /* WeatherJSON-Malformed.json in Resources */,
+				CE1154F31D1A894F00EF921F /* WeatherJSON-Max.json in Resources */,
+				CE1154F41D1A894F00EF921F /* WeatherJSON-Neg.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE6A07901C4828B70023C1F3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA270BA1D11CD100010FB9B /* Logo.png in Resources */,
 				CE03C3501CE882A300091DBC /* splashscreen.png in Resources */,
 				CE6A07A51C4828B70023C1F3 /* LaunchScreen.storyboard in Resources */,
 				CE9D014F1CEE2C2F00BD4D43 /* Authentication.storyboard in Resources */,
@@ -596,14 +650,6 @@
 				CE9D01621CEE3D0900BD4D43 /* Info.plist in Resources */,
 				CE03C34D1CE8829A00091DBC /* milk.jpg in Resources */,
 				CE03C34A1CE8828500091DBC /* crs@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CE6A07A91C4828B70023C1F3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CE9D01631CEE3D0A00BD4D43 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,51 +724,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Behind Walls/Pods-Behind Walls-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		83F548B42D2C08E1E8C9DEF8 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Behind WallsTests/Pods-Behind WallsTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8DBEE7029CCB2A9577038732 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Behind WallsTests/Pods-Behind WallsTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ABBDDC07E021C44F7FB885AD /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		CB79C91564648B6776B03889 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -741,6 +742,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CE1154DA1D1A724A00EF921F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE1154E11D1A724B00EF921F /* BehindWallsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE6A078E1C4828B70023C1F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -766,15 +775,10 @@
 				CE03C3591CE8839B00091DBC /* Room.m in Sources */,
 				CE9D01521CEE2F1E00BD4D43 /* FacebookAuthViewController.m in Sources */,
 				CE6A07971C4828B70023C1F3 /* main.m in Sources */,
+				CE8861541D12CE6300C77853 /* AltimeterWrapper.m in Sources */,
+				CE8861581D1423CD00C77853 /* MapViewController.m in Sources */,
+				CEA270B61D11AA960010FB9B /* ColorDetector.m in Sources */,
 				CE9D01591CEE32B800BD4D43 /* FingerprintAuthenticationViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CE6A07A71C4828B70023C1F3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CE6A07B01C4828B70023C1F3 /* SafeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,10 +793,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CE6A07AD1C4828B70023C1F3 /* PBXTargetDependency */ = {
+		CE1154E41D1A724B00EF921F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CE6A07911C4828B70023C1F3 /* Behind Walls */;
-			targetProxy = CE6A07AC1C4828B70023C1F3 /* PBXContainerItemProxy */;
+			targetProxy = CE1154E31D1A724B00EF921F /* PBXContainerItemProxy */;
 		};
 		CE6A07B81C4828B70023C1F3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -821,6 +825,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CE1154E61D1A724B00EF921F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = BehindWallsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.too.BehindWallsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Behind Walls.app/Behind Walls";
+			};
+			name = Debug;
+		};
+		CE1154E71D1A724B00EF921F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = BehindWallsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.too.BehindWallsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Behind Walls.app/Behind Walls";
+			};
+			name = Release;
+		};
 		CE6A07BD1C4828B70023C1F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -914,6 +948,9 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Safe/ExternalFrameworks",
 				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Safe/PrefixHeader.pch";
 				INFOPLIST_FILE = Safe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
@@ -939,6 +976,9 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Safe/ExternalFrameworks",
 				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Safe/PrefixHeader.pch";
 				INFOPLIST_FILE = Safe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -947,32 +987,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.too.behindwalls;
 				PRODUCT_NAME = "Behind Walls";
-			};
-			name = Release;
-		};
-		CE6A07C31C4828B80023C1F3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D391FF95B6534865AE7592C7 /* Pods-Behind WallsTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = SafeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.too.SafeTests;
-				PRODUCT_NAME = "Behind Walls";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Behind Walls.app/Behind Walls";
-			};
-			name = Debug;
-		};
-		CE6A07C41C4828B80023C1F3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00E76820C4D347A6FDE8589B /* Pods-Behind WallsTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = SafeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.too.SafeTests;
-				PRODUCT_NAME = "Behind Walls";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Behind Walls.app/Behind Walls";
 			};
 			name = Release;
 		};
@@ -1005,7 +1019,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE6A078D1C4828B70023C1F3 /* Build configuration list for PBXProject "Behind Walls" */ = {
+		CE1154E51D1A724B00EF921F /* Build configuration list for PBXNativeTarget "BehindWallsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE1154E61D1A724B00EF921F /* Debug */,
+				CE1154E71D1A724B00EF921F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CE6A078D1C4828B70023C1F3 /* Build configuration list for PBXProject "BehindWalls" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE6A07BD1C4828B70023C1F3 /* Debug */,
@@ -1019,15 +1041,6 @@
 			buildConfigurations = (
 				CE6A07C01C4828B80023C1F3 /* Debug */,
 				CE6A07C11C4828B80023C1F3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CE6A07C21C4828B80023C1F3 /* Build configuration list for PBXNativeTarget "Behind WallsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CE6A07C31C4828B80023C1F3 /* Debug */,
-				CE6A07C41C4828B80023C1F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

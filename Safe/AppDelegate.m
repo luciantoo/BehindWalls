@@ -19,6 +19,7 @@
     // Override point for customization after application launch.
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
     return YES;
 }
 

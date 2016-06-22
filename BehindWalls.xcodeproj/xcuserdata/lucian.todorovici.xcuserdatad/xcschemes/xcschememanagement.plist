@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BehindWallsTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>Safe.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>CE1154DD1D1A724A00EF921F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>CE6A07911C4828B70023C1F3</key>
 		<dict>
 			<key>primary</key>

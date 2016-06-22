@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "Room.h"
+#import "MapDisplayableProtocol.h"
 
-@interface Estate : NSObject
+@interface Estate : NSObject <MapDisplayableProtocol>
 
-@property(strong,nonatomic) CLPlacemark *placemark;
 @property(strong,atomic) NSNumber *surface;
 @property(strong,nonatomic) NSDate *builtDate;
 @property(strong,nonatomic) NSArray<Room *> *rooms;

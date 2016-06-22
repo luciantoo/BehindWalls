@@ -14,7 +14,7 @@
 
 @interface WeatherManager : NSObject
 
-+(WeatherManager*)sharedInstance;
++ (WeatherManager*)sharedInstance;
 
 /**
  *  Performs a http request to the openweathermap.org weather service server. 
@@ -24,6 +24,7 @@
  *  @param coordinates Geographical coordinates corresponding to the target place
  *  @param label       A UILabel in which the result is displayed
  */
--(void)requestTemperatureForCoordinates:(CLLocationCoordinate2D)coordinates inLabel:(UILabel*)label;
+- (void)requestTemperatureForCoordinates:(CLLocationCoordinate2D)coordinates inLabel:(UILabel*)label;
+
 
 @end

@@ -8,6 +8,9 @@
 
 #import "MediaCaptureViewController.h"
 #import "WeatherManager.h"
+#import "ColorDetector.h"
+#import <FLIROneSDK/FLIROneSDKSimulation.h>
+#import "AltimeterWrapper.h"
 
 @interface MediaCaptureViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
@@ -17,8 +20,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *surfaceTemperatureLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *colorImageView;
+@property (weak, nonatomic) IBOutlet UILabel *altitudeLabel;
+
+
 
 @property(strong,nonatomic) CLLocationManager *locationManager;
+@property(strong,nonatomic) ColorDetector *colorDetector;
+@property(strong,nonatomic) AltimeterWrapper *altimeter;
 @end
 
 
@@ -29,11 +38,12 @@ static NSString * const ALBUM_NAME = @"flir";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    [[FLIROneSDKSimulation sharedInstance] connectWithFrameBundleName:@"sampleframes_hq" withBatteryChargePercentage:@42];
     [FLIROneSDK sharedInstance].userInterfaceUsesCelsius = YES;
     [[FLIROneSDKStreamManager sharedInstance] addDelegate:self];
     [[FLIROneSDKStreamManager sharedInstance] performTuning];
     [[FLIROneSDKStreamManager sharedInstance] setAutomaticTuning:YES];
-    [FLIROneSDKStreamManager sharedInstance].imageOptions =  FLIROneSDKImageOptionsThermalRadiometricKelvinImage | FLIROneSDKImageOptionsBlendedMSXRGBA8888Image;
+    [FLIROneSDKStreamManager sharedInstance].imageOptions =  FLIROneSDKImageOptionsThermalRadiometricKelvinImage | FLIROneSDKImageOptionsBlendedMSXRGBA8888Image | FLIROneSDKImageOptionsVisualJPEGImage;
     
     if([PHPhotoLibrary authorizationStatus] != PHAuthorizationStatusAuthorized){
         NSLog(@"Not authorized to save pictures");
@@ -46,6 +56,10 @@ static NSString * const ALBUM_NAME = @"flir";
     
     // add the action of saving the image when the capture button is pressed
     [self.captureBtn addTarget:self action:@selector(captureBtnPressed) forControlEvents:UIControlEventTouchUpInside];
+    
+    _colorDetector = [ColorDetector new];
+    
+    [self startAltimeterUpdates];
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,17 +88,19 @@ static NSString * const ALBUM_NAME = @"flir";
         self.imgView.image = image;
     });
 }
-/*
+
 -(void)FLIROneSDKDelegateManager:(FLIROneSDKDelegateManager *)delegateManager didReceiveVisualJPEGImage:(NSData *)visualJPEGImage
 {
-    const CGSize size = CGSizeMake(640, 480);
+    const CGSize size = CGSizeMake(480, 640);
     UIImage *image = [FLIROneSDKUIImage imageWithFormat:FLIROneSDKImageOptionsVisualJPEGImage andData:visualJPEGImage andSize:size];
     
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        self.imgView.image = image;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIImage *img = [UIImage imageNamed:@"Logo"];
+        UIImage *predominantColor = [self.colorDetector extractColorFromImage:image TargetRect:CGRectMake(237, 317, 6, 6)];
+        self.colorImageView.image = predominantColor;
     });
 }
- */
+
 
 - (void)FLIROneSDKDelegateManager:(FLIROneSDKDelegateManager *)delegateManager didReceiveRadiometricData:(NSData *)radiometricData imageSize:(CGSize)size{
     UIImage *image = [FLIROneSDKUIImage imageWithFormat:FLIROneSDKImageOptionsThermalRadiometricKelvinImage andData:radiometricData andSize:size];
@@ -191,5 +207,11 @@ static NSString * const ALBUM_NAME = @"flir";
     _headingLabel.text = [NSString stringWithFormat:@"%f°",newHeading.trueHeading];
 }
 
+#pragma mark - Altimeter -
 
+-(void)startAltimeterUpdates
+{
+    _altimeter = [[AltimeterWrapper alloc] init];
+    [_altimeter showAltitudeInLabel:_altitudeLabel];
+}
 @end
