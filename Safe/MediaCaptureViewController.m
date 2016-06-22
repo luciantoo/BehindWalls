@@ -96,7 +96,7 @@ static NSString * const ALBUM_NAME = @"flir";
     
     dispatch_async(dispatch_get_main_queue(), ^{
         UIImage *img = [UIImage imageNamed:@"Logo"];
-        UIImage *predominantColor = [self.colorDetector extractColorFromImage:image TargetRect:CGRectMake(237, 317, 6, 6)];
+        UIImage *predominantColor = [self.colorDetector extractColorImageFromImage:image targetRect:CGRectMake(237, 317, 6, 6)];
         self.colorImageView.image = predominantColor;
     });
 }

@@ -25,7 +25,7 @@
     CFDataRef pixelData = CGDataProviderCopyData(CGImageGetDataProvider(cgImage));
     const UInt8 *pixelDataPointer = CFDataGetBytePtr(pixelData);
     const CGFloat colorDivider = 255.0f;
-    DDLogDebug(@"Color space: %@",CGImageGetColorSpace(targetImage.CGImage));
+    DDLogVerbose(@"Color space: %@",CGImageGetColorSpace(targetImage.CGImage));
     
     //the image has only one pixel
     CGFloat red = pixelDataPointer[0]/colorDivider; // RED
@@ -39,7 +39,15 @@
 
 - (CIImage*)filteredImageFromImage:(UIImage*)targetImage targetRect:(CGRect)targetRect
 {
-    CIImage *image = [[CIImage alloc] initWithCGImage:targetImage.CGImage];
+    CIImage *image;
+    if(targetImage.CGImage){
+        image = [[CIImage alloc] initWithCGImage:targetImage.CGImage];
+    }else if(targetImage.CIImage){
+        image = targetImage.CIImage;
+    }else {
+        DDLogError(@"Cannot apply the filter to the image");
+        return nil;
+    }
     CIFilter *filter = [CIFilter filterWithName:kExtractColourFilter];
     CIVector *vector = [CIVector vectorWithCGRect:targetRect];
     

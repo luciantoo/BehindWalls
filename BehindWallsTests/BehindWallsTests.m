@@ -81,32 +81,47 @@
 - (void)testWhite
 {
     UIImage *target = [self generateImageWithColor:[UIColor whiteColor]];
-
+    UIColor *resultedColor = [_colorDetector extractColorFromImage:[UIImage imageNamed:@"Logo"] targetRect:CGRectMake(0, 0, 1, 1)];
+    XCTAssertEqual(resultedColor, [UIColor whiteColor]);
+    CGFloat red,green,blue,alpha;
+    [resultedColor getRed:&red green:&green blue:&blue alpha:&alpha];
+    NSLog(@"Resulted color componenets: %2f,%2f,%2f",red,green,blue);
 }
 
 - (void)testBlack
 {
     UIImage *target = [self generateImageWithColor:[UIColor blackColor]];
+    UIColor *resultedColor = [_colorDetector extractColorFromImage:target targetRect:CGRectMake(0, 0, 1, 1)];
+    XCTAssertEqual(resultedColor, [UIColor blackColor]);
 }
 
 - (void)testRed
 {
     UIImage *target = [self generateImageWithColor:[UIColor redColor]];
+    UIColor *resultedColor = [_colorDetector extractColorFromImage:target targetRect:CGRectMake(0, 0, 1, 1)];
+    XCTAssertEqual(resultedColor, [UIColor redColor]);
 }
 
 - (void)testGreen
 {
     UIImage *target = [self generateImageWithColor:[UIColor greenColor]];
+    UIColor *resultedColor = [_colorDetector extractColorFromImage:target targetRect:CGRectMake(0, 0, 1, 1)];
+    XCTAssertEqual(resultedColor, [UIColor greenColor]);
 }
 
 - (void)testBlue
 {
     UIImage *target = [self generateImageWithColor:[UIColor blueColor]];
+    UIColor *resultedColor = [_colorDetector extractColorFromImage:target targetRect:CGRectMake(0, 0, 1, 1)];
+    XCTAssertEqual(resultedColor, [UIColor blueColor]);
 }
 
 -(UIImage*)generateImageWithColor:(UIColor*)color
 {
-    CIImage *colorImage = [CIImage imageWithColor:color.CIColor];
+    CGFloat red,green,blue,alpha;
+    [color getRed:&red green:&green blue:&blue alpha:&alpha];
+    CIColor *cicolor = [CIColor colorWithRed:red green:green blue:blue alpha:alpha];
+    CIImage *colorImage = [CIImage imageWithColor:cicolor];
     return [UIImage imageWithCIImage:colorImage];
 }
 
