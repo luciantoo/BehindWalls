@@ -7,6 +7,8 @@
 //
 
 #import "FingerprintAuthenticationViewController.h"
+#import "UIViewController+Alerts.h"
+
 @import LocalAuthentication;
 
 @interface FingerprintAuthenticationViewController ()
@@ -129,10 +131,7 @@
                 break;
         }
         
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Authentication" message:messageString preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:authenticationHandler]];
-        [self presentViewController:alertController animated:YES completion:nil];
-        
+        [self presentActionAlertWithTitle:@"Authentication" message:messageString action:authenticationHandler];
     }
 }
 

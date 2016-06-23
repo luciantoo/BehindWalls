@@ -48,7 +48,7 @@
                 if(!error){
                     long int celsiusTemperature = temperature - 274.15;
                     dispatch_sync(dispatch_get_main_queue(), ^{
-                        label.text = [NSString stringWithFormat:@"air temp: %li K (%li)",temperature,celsiusTemperature];
+                        label.text = [NSString stringWithFormat:@"air temp: %liK (%li °C)",temperature,celsiusTemperature];
                     });
                 }
             }else {

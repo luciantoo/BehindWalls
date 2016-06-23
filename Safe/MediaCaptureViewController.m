@@ -11,11 +11,12 @@
 #import "ColorDetector.h"
 #import <FLIROneSDK/FLIROneSDKSimulation.h>
 #import "AltimeterWrapper.h"
+#import "UIViewController+Alerts.h"
 
 @interface MediaCaptureViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
 @property (weak, nonatomic) IBOutlet UIButton *captureBtn;
-@property (weak, nonatomic) IBOutlet UISwitch *photoVideoSwitch;
+@property (weak, nonatomic) IBOutlet UIButton *screenCaptureBtn;
 @property (weak, nonatomic) IBOutlet UILabel *headingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
@@ -38,7 +39,7 @@ static NSString * const ALBUM_NAME = @"flir";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    [[FLIROneSDKSimulation sharedInstance] connectWithFrameBundleName:@"sampleframes_hq" withBatteryChargePercentage:@42];
+    [[FLIROneSDKSimulation sharedInstance] connectWithFrameBundleName:@"sampleframes_hq" withBatteryChargePercentage:@42];
     [FLIROneSDK sharedInstance].userInterfaceUsesCelsius = YES;
     [[FLIROneSDKStreamManager sharedInstance] addDelegate:self];
     [[FLIROneSDKStreamManager sharedInstance] performTuning];
@@ -46,17 +47,21 @@ static NSString * const ALBUM_NAME = @"flir";
     [FLIROneSDKStreamManager sharedInstance].imageOptions =  FLIROneSDKImageOptionsThermalRadiometricKelvinImage | FLIROneSDKImageOptionsBlendedMSXRGBA8888Image | FLIROneSDKImageOptionsVisualJPEGImage;
     
     if([PHPhotoLibrary authorizationStatus] != PHAuthorizationStatusAuthorized){
-        NSLog(@"Not authorized to save pictures");
+        DDLogWarn(@"Not authorized to save pictures");
         [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
-            NSLog(@"Authorized");
+            DDLogInfo(@"Authorized");
         }];
     }
     
     [self setupLocationManager];
     
-    // add the action of saving the image when the capture button is pressed
+    // add the action of saving the image when the capture button is tapped
     [self.captureBtn addTarget:self action:@selector(captureBtnPressed) forControlEvents:UIControlEventTouchUpInside];
     
+    // add the action of taking a screenshot when the button is tapped
+    [self.screenCaptureBtn addTarget:self action:@selector(screenCaptureBtnPressed) forControlEvents:UIControlEventTouchUpInside];
+    
+    //instantiate a new color detector
     _colorDetector = [ColorDetector new];
     
     [self startAltimeterUpdates];
@@ -69,11 +74,27 @@ static NSString * const ALBUM_NAME = @"flir";
 
 #pragma mark -Actions-
 
--(void)captureBtnPressed
+- (void)captureBtnPressed
 {
     if(self.imgView.image){
         [self addNewAssetWithImage:self.imgView.image toAlbum:ALBUM_NAME];
     }else{
+        DDLogError(@"Cannot save the image, because it is nil");
+    }
+}
+
+- (void)screenCaptureBtnPressed
+{
+    UIGraphicsBeginImageContextWithOptions([[UIScreen mainScreen] bounds].size, NO, [UIScreen mainScreen].scale);
+    [self.view drawViewHierarchyInRect:self.view.bounds afterScreenUpdates:NO];
+    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    NSData *imgData = UIImageJPEGRepresentation(viewImage, 1);
+    UIImage *img = [UIImage imageWithData:imgData];
+    if (img) {
+        [self addNewAssetWithImage:img toAlbum:ALBUM_NAME];
+    }else {
         DDLogError(@"Cannot save the image, because it is nil");
     }
 }
@@ -121,7 +142,7 @@ static NSString * const ALBUM_NAME = @"flir";
         float temp = ((float)buffer[middle]/100.0f);
         long int cTemp =(long int) (temp - 274.15);
         dispatch_async(dispatch_get_main_queue(), ^{
-            self.surfaceTemperatureLabel.text = [NSString stringWithFormat:@"surface temp: %.0f (%li °C)",temp,cTemp];
+            self.surfaceTemperatureLabel.text = [NSString stringWithFormat:@"surface temp: %.0fK (%li °C)",temp,cTemp];
         });
     });
 }
@@ -154,6 +175,10 @@ static NSString * const ALBUM_NAME = @"flir";
         [albumChangeRequest addAssets:@[ assetPlaceholder ]];
         
     } completionHandler:^(BOOL success, NSError *error) {
+        //inform the user that the captured image was not saved
+        if(error){
+            [self presentInfoAlertWithTitle:@"Media Library" message:[NSString stringWithFormat:@"Could not save image.%@",[error localizedDescription]]];
+        }
         DDLogInfo(@"Finished adding asset. %@", (success ? @"Success" : error));
     }];
 }
@@ -178,11 +203,14 @@ static NSString * const ALBUM_NAME = @"flir";
 {
     // user has accepted using the location services
     if(status == kCLAuthorizationStatusAuthorizedWhenInUse) {
+        DDLogInfo(@"Location services authorized");
         // let's get the current location , show it visually to the user
         [_locationManager startUpdatingLocation];
+        [_locationManager startUpdatingHeading];
     }else {
         //show we cannot use location services
-        
+        DDLogWarn(@"Unauthorized to use location services");
+        [self presentInfoAlertWithTitle:@"Location Services" message:@"Location services can be enabled from settings"];
     }
 }
 

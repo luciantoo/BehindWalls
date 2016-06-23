@@ -41,6 +41,7 @@
         
     }else{
         DDLogInfo(@"Google authentication -> User:%@ has just signed in",user.profile.name);
+        [super userAuthenticatedSuccessfully];
     }
 }
 

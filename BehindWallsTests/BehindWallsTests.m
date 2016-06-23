@@ -11,6 +11,14 @@
 #import "ColorDetector.h"
 
 @interface WeatherManager (Test)
+/**
+ *  Internal method for extracting the temperature value from a JSON object
+ *
+ *  @param data  NSData representing a serialized JSON containing a temperature key
+ *  @param error NSError pointer indicating something wrong happened
+ *
+ *  @return the long integer value of the temperature key
+ */
 - (long int)extractTemperatureFromResponseData:(NSData*)data error:(NSError**)error;
 @end
 

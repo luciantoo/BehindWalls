@@ -46,7 +46,7 @@
         }
         DDLogWarn(@"Fb Authentication -> Failed");
         UIViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"login_error_vc"];
-        //(*ErrorViewController) controller
+        //TODO:(*ErrorViewController) controller
         [self.navigationController pushViewController:controller animated:YES];
     }];
 }
