@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <Google/SignIn.h>
+#import "BasicAuthenticationViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -67,9 +69,19 @@
 
 -(void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler{
     //handle application shortcuts
+    
+    
     if([shortcutItem.type isEqualToString:@"com.too.Safe.thermal_pic"]){
-        UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-        [tabBarController setSelectedIndex:2];
+        //firstly, the user has to login
+        UIViewController *takeThermalPictureVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+        BasicAuthenticationViewController *loginNavigationVC = (BasicAuthenticationViewController*)[[UIStoryboard storyboardWithName:@"Authentication" bundle:nil] instantiateViewControllerWithIdentifier:@"fingerprintVC"];
+        loginNavigationVC.authenticationCompletionBlock = ^(){
+            [self.window.rootViewController presentViewController:takeThermalPictureVC animated:YES completion:^(){
+                UITabBarController *tabBarController = (UITabBarController *)takeThermalPictureVC;
+                [tabBarController setSelectedIndex:1];
+            }];
+        };
+        self.window.rootViewController = loginNavigationVC;
     }
 }
 

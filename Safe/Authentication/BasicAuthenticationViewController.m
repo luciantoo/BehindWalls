@@ -36,9 +36,13 @@
     AppDelegate *delegate = [UIApplication sharedApplication].delegate;
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *mainViewController = [mainStoryboard instantiateInitialViewController];
-    [self presentViewController:mainViewController animated:YES completion:^{
-        delegate.window.rootViewController = mainViewController;
-    }];
+    if(!self.authenticationCompletionBlock){
+        [self presentViewController:mainViewController animated:YES completion:^{
+            delegate.window.rootViewController = mainViewController;
+        }];
+    }else{
+        self.authenticationCompletionBlock();
+    }
 }
 
 @end

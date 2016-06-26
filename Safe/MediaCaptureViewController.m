@@ -39,7 +39,7 @@ static NSString * const ALBUM_NAME = @"flir";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[FLIROneSDKSimulation sharedInstance] connectWithFrameBundleName:@"sampleframes_hq" withBatteryChargePercentage:@42];
+//    [[FLIROneSDKSimulation sharedInstance] connectWithFrameBundleName:@"sampleframes_hq" withBatteryChargePercentage:@42];
     [FLIROneSDK sharedInstance].userInterfaceUsesCelsius = YES;
     [[FLIROneSDKStreamManager sharedInstance] addDelegate:self];
     [[FLIROneSDKStreamManager sharedInstance] performTuning];
@@ -175,9 +175,11 @@ static NSString * const ALBUM_NAME = @"flir";
         [albumChangeRequest addAssets:@[ assetPlaceholder ]];
         
     } completionHandler:^(BOOL success, NSError *error) {
-        //inform the user that the captured image was not saved
         if(error){
+            //inform the user that an error occurred and the captured image was not saved
             [self presentInfoAlertWithTitle:@"Media Library" message:[NSString stringWithFormat:@"Could not save image.%@",[error localizedDescription]]];
+        }else{
+            [self presentInfoAlertWithTitle:@"Media Library" message:@"Image saved successfully"];
         }
         DDLogInfo(@"Finished adding asset. %@", (success ? @"Success" : error));
     }];

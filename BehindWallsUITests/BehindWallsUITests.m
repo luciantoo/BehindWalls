@@ -1,18 +1,18 @@
 //
-//  SafeUITests.m
-//  SafeUITests
+//  BehindWallsUITests.m
+//  BehindWallsUITests
 //
-//  Created by Lucian Todorovici on 14/01/16.
+//  Created by TOO on 23/06/16.
 //  Copyright © 2016 Lucian Todorovici. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface SafeUITests : XCTestCase
+@interface BehindWallsUITests : XCTestCase
 
 @end
 
-@implementation SafeUITests
+@implementation BehindWallsUITests
 
 - (void)setUp {
     [super setUp];
@@ -35,6 +35,8 @@
 - (void)testExample {
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    
 }
 
 @end

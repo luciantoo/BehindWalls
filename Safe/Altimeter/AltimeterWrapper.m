@@ -39,7 +39,7 @@
             if (altitudeData && !error) {
                 NSOperationQueue *mainQueue = [NSOperationQueue mainQueue];
                 [mainQueue addOperationWithBlock:^{
-                    NSString *altimeterString = [NSString stringWithFormat:@"%2f m",altitudeData.relativeAltitude.floatValue];
+                    NSString *altimeterString = [NSString stringWithFormat:@"%.2f m",altitudeData.relativeAltitude.floatValue];
                     label.text = altimeterString;
                 }];
             }
