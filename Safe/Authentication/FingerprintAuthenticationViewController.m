@@ -82,7 +82,9 @@
             case LAErrorUserCancel:
                 {
                     messageString = @"You did not authenticate.";
-                    [self authenticate];
+                    authenticationHandler = ^(UIAlertAction * _Nonnull action){
+                        [self.navigationController popViewControllerAnimated:YES];
+                    };
                 }
                 break;
             case LAErrorPasscodeNotSet:

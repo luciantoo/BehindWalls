@@ -7,6 +7,7 @@
 //
 
 #import "GoogleSignInViewController.h"
+#import "UIViewController+Alerts.h"
 
 @interface GoogleSignInViewController ()
 
@@ -38,7 +39,10 @@
 {
     if(error){
         DDLogWarn(@"Google authentication -> Failed: %@",error.localizedDescription);
-        
+        NSString *message = [NSString stringWithFormat:@"Facebook Login failed: %@", [error localizedDescription]];
+        [self presentActionAlertWithTitle:@"Failed" message:message action:^(UIAlertAction *action) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }];
     }else{
         DDLogInfo(@"Google authentication -> User:%@ has just signed in",user.profile.name);
         [super userAuthenticatedSuccessfully];

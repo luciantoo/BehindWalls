@@ -8,6 +8,7 @@
 
 #import "FacebookAuthViewController.h"
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "UIViewController+Alerts.h"
 
 @interface FacebookAuthViewController ()
 
@@ -45,9 +46,10 @@
             }
         }
         DDLogWarn(@"Fb Authentication -> Failed");
-        UIViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"login_error_vc"];
-        //TODO:(*ErrorViewController) controller
-        [self.navigationController pushViewController:controller animated:YES];
+        NSString *message = [NSString stringWithFormat:@"Facebook Login failed: %@", [error localizedDescription]];
+        [self presentActionAlertWithTitle:@"Failed" message:message action:^(UIAlertAction *action) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }];
     }];
 }
 
